@@ -2,62 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CitiusCare Agentic AI POC</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>CitiusCare Healthcare Portal</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header class="top-header">
-  <div class="brand">
-    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" />
-    <div>
-      <h1>CitiusCare</h1>
-      <span>Agentic AI Healthcare POC</span>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header-content">
+      <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" class="logo" alt="CitiusCare Logo" />
+      <h1>CitiusCare Healthcare POC</h1>
     </div>
-  </div>
-</header>
+  </header>
 
-<div class="ticker">
-  <marquee behavior="scroll" direction="left">
-    🔵 AI-powered Claims Review | 🟢 Medicare & Medicaid Eligibility | 🟣 Agentic Automation | 🟠 Real-time Exception Analysis
-  </marquee>
-</div>
-
-<main>
-  <div class="form-card">
-    <h2>Claims Submission Portal</h2>
-    <p class="subtitle">US Healthcare – Payer Simulation</p>
-
-    <div class="form-grid">
-      <input id="memberId" class="large" placeholder="Member ID (M12345)" />
-      <input id="npi" placeholder="Provider NPI" />
-      <input id="cpt" placeholder="CPT Code (99213)" />
-      <input id="icd" placeholder="ICD-10 Code (E11.9)" />
-      <input id="amount" type="number" class="large" placeholder="Claim Amount ($)" />
-      <select id="plan">
-        <option value="">Select Plan</option>
-        <option>HMO</option>
-        <option>PPO</option>
-        <option>Medicare</option>
-        <option>Medicaid</option>
-      </select>
-    </div>
-
-    <button class="submit-btn" onclick="submitClaim()">Submit for AI Review</button>
+  <!-- LIVE TEXT MARQUEE -->
+  <div class="marquee">
+    <marquee behavior="scroll" direction="left">
+      ➤ Real-time Claim Submission&nbsp;&nbsp;|&nbsp;&nbsp;AI Eligibility Check&nbsp;&nbsp;|&nbsp;&nbsp;Exception Handling&nbsp;&nbsp;|&nbsp;&nbsp;Smart Agent Decisions
+    </marquee>
   </div>
 
-  <div id="resultCard" class="status-card hidden">
-    <span id="statusBadge"></span>
-    <p id="statusText"></p>
-  </div>
-</main>
+  <!-- FORM (CENTERED) -->
+  <main class="main-container">
+    <section class="form-section">
+      <h2>Submit Healthcare Claim</h2>
+      <p class="subtext">Fill in details below to submit your claim</p>
 
-<footer>
-  © 2026 CitiusCare | Agentic AI Proof of Concept
-</footer>
+      <div class="form-wrapper">
 
-<script src="script.js"></script>
+        <div class="input-group">
+          <label>Member ID</label>
+          <input id="memberId" placeholder="M12345">
+        </div>
+
+        <div class="input-group">
+          <label>Provider NPI</label>
+          <input id="npi" placeholder="1234567890">
+        </div>
+
+        <div class="input-group">
+          <label>CPT Code</label>
+          <input id="cpt" placeholder="99213">
+        </div>
+
+        <div class="input-group">
+          <label>ICD-10 Code</label>
+          <input id="icd" placeholder="E11.9">
+        </div>
+
+        <div class="input-group large">
+          <label>Claim Amount ($)</label>
+          <input id="amount" type="number" placeholder="2500">
+        </div>
+
+        <div class="input-group large">
+          <label>Plan Type</label>
+          <select id="plan">
+            <option>Select Plan</option>
+            <option>HMO</option>
+            <option>PPO</option>
+            <option>Medicare</option>
+            <option>Medicaid</option>
+          </select>
+        </div>
+
+      </div>
+
+      <button class="btn primary-btn" onclick="submitClaim()">Submit Claim</button>
+    </section>
+
+    <!-- STATUS CARD -->
+    <section id="statusCard" class="status-section hidden">
+      <span id="statusBadge"></span>
+      <p id="statusMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 CitiusCare Health Solutions</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
