@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AI Innovator Challange</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>CitiusCare Agentic AI POC</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<h2>AI Innovator Challenge</h2>
+<header class="top-header">
+  <div class="brand">
+    <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" />
+    <div>
+      <h1>CitiusCare</h1>
+      <span>Agentic AI Healthcare POC</span>
+    </div>
+  </div>
+</header>
 
-<form id="claimForm">
-  <label>Member ID:</label>
-  <input type="text" id="memberId" required>
+<div class="ticker">
+  <marquee behavior="scroll" direction="left">
+    🔵 AI-powered Claims Review | 🟢 Medicare & Medicaid Eligibility | 🟣 Agentic Automation | 🟠 Real-time Exception Analysis
+  </marquee>
+</div>
 
-  <label>Provider NPI:</label>
-  <input type="text" id="npi" required>
+<main>
+  <div class="form-card">
+    <h2>Claims Submission Portal</h2>
+    <p class="subtitle">US Healthcare – Payer Simulation</p>
 
-  <label>Procedure Code (CPT):</label>
-  <input type="text" id="cpt" required>
+    <div class="form-grid">
+      <input id="memberId" class="large" placeholder="Member ID (M12345)" />
+      <input id="npi" placeholder="Provider NPI" />
+      <input id="cpt" placeholder="CPT Code (99213)" />
+      <input id="icd" placeholder="ICD-10 Code (E11.9)" />
+      <input id="amount" type="number" class="large" placeholder="Claim Amount ($)" />
+      <select id="plan">
+        <option value="">Select Plan</option>
+        <option>HMO</option>
+        <option>PPO</option>
+        <option>Medicare</option>
+        <option>Medicaid</option>
+      </select>
+    </div>
 
-  <label>Diagnosis Code (ICD-10):</label>
-  <input type="text" id="icd" required>
+    <button class="submit-btn" onclick="submitClaim()">Submit for AI Review</button>
+  </div>
 
-  <label>Claim Amount ($):</label>
-  <input type="number" id="amount" required>
+  <div id="resultCard" class="status-card hidden">
+    <span id="statusBadge"></span>
+    <p id="statusText"></p>
+  </div>
+</main>
 
-  <label>Plan Type:</label>
-  <select id="plan">
-    <option>HMO</option>
-    <option>PPO</option>
-    <option>Medicare</option>
-    <option>Medicaid</option>
-  </select>
-
-  <button type="button" onclick="submitClaim()">Submit Claim</button>
-</form>
-
-<div id="result"></div>
+<footer>
+  © 2026 CitiusCare | Agentic AI Proof of Concept
+</footer>
 
 <script src="script.js"></script>
 </body>
