@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>US Healthcare Claims Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>US Healthcare – Claims Eligibility Portal</h2>
+
+<form id="claimForm">
+  <label>Member ID:</label>
+  <input type="text" id="memberId" required>
+
+  <label>Provider NPI:</label>
+  <input type="text" id="npi" required>
+
+  <label>Procedure Code (CPT):</label>
+  <input type="text" id="cpt" required>
+
+  <label>Diagnosis Code (ICD-10):</label>
+  <input type="text" id="icd" required>
+
+  <label>Claim Amount ($):</label>
+  <input type="number" id="amount" required>
+
+  <label>Plan Type:</label>
+  <select id="plan">
+    <option>HMO</option>
+    <option>PPO</option>
+    <option>Medicare</option>
+    <option>Medicaid</option>
+  </select>
+
+  <button type="button" onclick="submitClaim()">Submit Claim</button>
+</form>
+
+<div id="result"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
