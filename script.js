@@ -3,21 +3,21 @@ function submitClaim() {
   const npi = document.getElementById("npi").value;
   const plan = document.getElementById("plan").value;
 
-  const card = document.getElementById("resultCard");
+  const statusCard = document.getElementById("statusCard");
   const badge = document.getElementById("statusBadge");
-  const text = document.getElementById("statusText");
+  const message = document.getElementById("statusMessage");
 
-  card.classList.remove("hidden");
+  statusCard.classList.remove("hidden");
 
   if (!memberId || !npi || !plan) {
-    badge.innerText = "Business Exception";
-    badge.style.background = "#f97316";
-    badge.style.color = "white";
-    text.innerHTML = "Mandatory claim data is missing. Sent for agent review.";
+    badge.innerText = "Exception";
+    badge.style.background = "#dc2626";
+    badge.style.color = "#fff";
+    message.innerText = "Please fill all mandatory details.";
   } else {
-    badge.innerText = "Under AI Review";
+    badge.innerText = "Pending AI Review";
     badge.style.background = "#2563eb";
-    badge.style.color = "white";
-    text.innerHTML = "Claim submitted successfully. Agent is analyzing eligibility and risk.";
+    badge.style.color = "#fff";
+    message.innerText = "Your claim is submitted and being reviewed.";
   }
 }
