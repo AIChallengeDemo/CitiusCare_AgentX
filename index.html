@@ -2,29 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CitiusCare Healthcare Portal</title>
+  <title>CitiusCare Healthcare POC</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header class="header">
-  <div class="header-content">
+  <div class="header-inner">
     <img src="CTLogo.png" class="logo">
-    <h1>CitiusCare Healthcare POC</h1>
+    <div>
+      <h1>CitiusCare</h1>
+      <span>Healthcare Agentic AI POC</span>
+    </div>
   </div>
 </header>
 
-<div class="marquee">
-  <marquee>AI-Driven Claims Review | Agentic Automation | US Healthcare POC</marquee>
+<div class="banner">
+  AI‑Driven Claims Processing | Eligibility Validation | Agentic Automation
 </div>
 
 <main class="container">
   <div class="card">
-    <h2>Submit Healthcare Claim</h2>
-    <p class="subtext">Enter claim details for AI review</p>
+    <h2>Healthcare Claim Submission</h2>
+    <p class="subtext">Submit claim details for AI‑based review</p>
 
-    <div class="form-grid">
+    <div class="grid">
       <div>
         <label>Member ID</label>
         <input id="memberId" placeholder="M12345">
@@ -38,7 +41,7 @@
         <input id="cpt" placeholder="99213">
       </div>
       <div>
-        <label>ICD-10 Code</label>
+        <label>ICD‑10 Code</label>
         <input id="icd" placeholder="E11.9">
       </div>
       <div>
@@ -48,7 +51,7 @@
       <div>
         <label>Plan Type</label>
         <select id="plan">
-          <option value="">Select</option>
+          <option value="">Select Plan</option>
           <option>HMO</option>
           <option>PPO</option>
           <option>Medicare</option>
@@ -57,12 +60,12 @@
       </div>
     </div>
 
-    <button class="primary-btn" onclick="submitClaim()">Submit Claim</button>
+    <button class="btn-primary" onclick="submitClaim()">Submit Claim</button>
   </div>
 </main>
 
 <footer>
-  © 2026 CitiusCare | Agentic AI Proof of Concept
+  © 2026 CitiusTech | CitiusCare Healthcare POC
 </footer>
 
 <script src="script.js"></script>
