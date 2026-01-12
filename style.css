@@ -12,10 +12,10 @@ body{
 .header-inner{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:16px;
 }
 .logo{
-  height:42px;
+  height:64px;
 }
 .header h1{
   margin:0;
