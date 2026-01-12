@@ -5,26 +5,22 @@ body {
   color: #1f2937;
 }
 
-/* HEADER */
 .header {
   background: #0c4a6e;
-  padding: 18px 24px;
+  padding: 16px 24px;
   color: white;
 }
-.header .container {
+
+.header-content {
   display: flex;
   align-items: center;
   gap: 12px;
 }
+
 .logo {
-  width: 40px;
-}
-.header h1 {
-  font-size: 22px;
-  margin: 0;
+  width: 38px;
 }
 
-/* MARQUEE */
 .marquee {
   background: #0e7490;
   color: white;
@@ -32,100 +28,104 @@ body {
   padding: 6px 0;
 }
 
-/* MAIN */
-.main-container {
-  max-width: 920px;
+.container {
+  max-width: 900px;
   margin: 30px auto;
   padding: 0 20px;
 }
 
-/* FORM SECTION */
-.form-section {
+.card {
   background: white;
-  padding: 28px 32px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
 }
-.form-section h2 {
-  margin: 0 0 8px 0;
-  font-size: 20px;
+
+.success-card {
+  text-align: center;
 }
+
+.success-icon {
+  font-size: 48px;
+  color: #16a34a;
+  margin-bottom: 10px;
+}
+
 .subtext {
-  margin: 0 0 18px 0;
   color: #475569;
   font-size: 14px;
 }
 
-.form-wrapper {
+.form-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-}
-.input-group label {
-  font-size: 13px;
-  margin-bottom: 4px;
-}
-.input-group input,
-.input-group select {
-  padding: 10px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  font-size: 14px;
-}
-.input-group.large input,
-.input-group.large select {
-  font-size: 15px;
-}
-
-/* BUTTON */
-.btn {
-  width: 100%;
-  padding: 13px;
-  border-radius: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
   margin-top: 20px;
 }
+
+label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
 .primary-btn {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
   background: #0891b2;
   color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
+
 .primary-btn:hover {
   background: #0369a1;
 }
 
-/* STATUS SECTION */
-.status-section {
-  margin-top: 24px;
-  background: white;
-  padding: 18px 22px;
+.secondary-btn {
+  margin-top: 20px;
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  background: #e2e8f0;
+  border: none;
+  cursor: pointer;
+}
+
+.status-box {
+  margin-top: 16px;
+  padding: 14px;
+  background: #f1f5f9;
   border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
 }
-#statusBadge {
-  display: inline-block;
+
+.badge {
   padding: 6px 12px;
-  border-radius: 18px;
-  font-weight: 600;
+  border-radius: 16px;
   font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
 }
 
-/* HIDDEN */
-.hidden {
-  display: none;
+.badge.review {
+  background: #2563eb;
+  color: white;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
-  padding: 14px 0;
+  padding: 14px;
   font-size: 12px;
-  color: #6b7280;
+  color: #64748b;
 }
