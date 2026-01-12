@@ -1,47 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>CitiusCare Healthcare POC</title>
+  <title>Claim Form</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
+<body onload="checkAuth()">
 <header class="header">
   <div class="header-inner">
     <img src="citiustech-logo.png" class="logo">
-    <div>
-      <h1>CitiusCare</h1>
-      <span>Healthcare Agentic AI POC</span>
-    </div>
+    <h1>CitiusCare</h1>
+    <button class="logout" onclick="logout()">Logout</button>
   </div>
 </header>
 
 <main class="container">
   <div class="card">
     <h2>Healthcare Claim Submission</h2>
-    <p class="subtext">Submit claim details for AI-based review</p>
-
-    <div class="grid">
-      <div><label>Member ID</label><input id="memberId"></div>
-      <div><label>Provider NPI</label><input id="npi"></div>
-      <div><label>CPT Code</label><input id="cpt"></div>
-      <div><label>ICD-10 Code</label><input id="icd"></div>
-      <div><label>Claim Amount ($)</label><input id="amount" type="number"></div>
-      <div><label>Plan Type</label>
-        <select id="plan">
-          <option value="">Select</option>
-          <option>HMO</option><option>PPO</option>
-          <option>Medicare</option><option>Medicaid</option>
-        </select>
-      </div>
-    </div>
-
-    <button class="btn-primary" onclick="submitClaim()">Submit Claim</button>
+    <input id="memberId" placeholder="Member ID">
+    <input id="npi" placeholder="Provider NPI">
+    <select id="plan">
+      <option value="">Select Plan</option>
+      <option>HMO</option>
+      <option>PPO</option>
+    </select>
+    <button class="btn-primary" onclick="submitClaim()">Submit</button>
   </div>
 </main>
 
-<footer>© 2026 CitiusTech</footer>
+<script src="auth.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

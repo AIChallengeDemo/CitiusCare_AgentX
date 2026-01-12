@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Success</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body onload="checkAuth()">
 <header class="header">
   <div class="header-inner">
     <img src="citiustech-logo.png" class="logo">
     <h1>CitiusCare</h1>
+    <button class="logout" onclick="logout()">Logout</button>
   </div>
 </header>
+
 <main class="container">
   <div class="card success">
     <h2>Claim Submitted Successfully</h2>
-    <span class="status">Under AI Review</span>
-    <button class="btn-secondary" onclick="window.location.href='index.html'">Submit Another</button>
+    <button class="btn-secondary" onclick="window.location.href='index.html'">New Claim</button>
   </div>
 </main>
-<footer>© 2026 CitiusTech</footer>
+
+<script src="auth.js"></script>
 </body>
 </html>
