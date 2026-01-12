@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Claim Form</title>
+  <title>Healthcare Claim Submission</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="checkAuth()">
+
 <header class="header">
   <div class="header-inner">
     <img src="citiustech-logo.png" class="logo">
@@ -16,14 +17,42 @@
 <main class="container">
   <div class="card">
     <h2>Healthcare Claim Submission</h2>
-    <input id="memberId" placeholder="Member ID">
-    <input id="npi" placeholder="Provider NPI">
-    <select id="plan">
-      <option value="">Select Plan</option>
-      <option>HMO</option>
-      <option>PPO</option>
-    </select>
-    <button class="btn-primary" onclick="submitClaim()">Submit</button>
+    <p class="subtext">Submit claim details for AI-based review</p>
+
+    <div class="grid">
+      <div>
+        <label>Member ID</label>
+        <input id="memberId" placeholder="M12345">
+      </div>
+      <div>
+        <label>Provider NPI</label>
+        <input id="npi" placeholder="1234567890">
+      </div>
+      <div>
+        <label>CPT Code</label>
+        <input id="cpt" placeholder="99213">
+      </div>
+      <div>
+        <label>ICD-10 Code</label>
+        <input id="icd" placeholder="E11.9">
+      </div>
+      <div>
+        <label>Claim Amount ($)</label>
+        <input id="amount" type="number" placeholder="2500">
+      </div>
+      <div>
+        <label>Plan Type</label>
+        <select id="plan">
+          <option value="">Select Plan</option>
+          <option>HMO</option>
+          <option>PPO</option>
+          <option>Medicare</option>
+          <option>Medicaid</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="submitClaim()">Submit Claim</button>
   </div>
 </main>
 

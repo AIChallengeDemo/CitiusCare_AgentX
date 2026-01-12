@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Success</title>
+  <title>Claim Submitted</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="checkAuth()">
+
 <header class="header">
   <div class="header-inner">
     <img src="citiustech-logo.png" class="logo">
@@ -16,7 +17,12 @@
 <main class="container">
   <div class="card success">
     <h2>Claim Submitted Successfully</h2>
-    <button class="btn-secondary" onclick="window.location.href='index.html'">New Claim</button>
+    <p>Your claim has been sent for AI eligibility review.</p>
+    <span class="status">Under AI Review</span>
+
+    <button class="btn-secondary" onclick="window.location.href='index.html'">
+      Submit Another Claim
+    </button>
   </div>
 </main>
 
